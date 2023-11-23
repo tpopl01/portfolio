@@ -1,7 +1,10 @@
 
 const Heading = () => {
   return (
-    <div>Heading</div>
+    <div>
+      <h1>Timothy Pople</h1>
+      <p>Software Engineer, Full Stack & Games Developer</p>
+    </div>
   )
 }
 

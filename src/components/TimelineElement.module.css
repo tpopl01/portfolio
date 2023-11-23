@@ -1,0 +1,7 @@
+
+  .content {
+    padding: 20px 30px;
+    background-color: var(--secondary-color);
+    position: relative;
+    border-radius: 6px;
+  }
