@@ -1,15 +1,24 @@
 import ToolsElement from './ToolsElement'
+import styles from "./styles/Tools.module.css"
 
-const Tools = () => {
+interface IProps{
+  onHover:(hoveredText:string)=>void
+}
+
+const Tools = (props:IProps) => {
+
   return (
-    <div style={{padding:"10px", display:"flex", flexDirection:"row", gap:"1rem", alignItems:"center", justifyContent:"center", flexWrap:"wrap", minWidth:"50%"}}>
-        <ToolsElement text='C#'/>
-        <ToolsElement text='JavaScript'/>
-        <ToolsElement text='Python'/>
-        <ToolsElement text='Unity'/>
-        <ToolsElement text='React'/>
-        <ToolsElement text='Blender'/>
-    </div>
+    <>
+      <h3 style={{zIndex:200}}>Key Tools / Languages</h3>
+      <div onMouseLeave={()=>{props.onHover("")}} className={styles.tool} style={{zIndex:200}}>
+          <ToolsElement onHover={props.onHover} text='C#' borderRadius='15px 0px 0px 15px'/>
+          <ToolsElement onHover={props.onHover} text='JavaScript'/>
+          <ToolsElement onHover={props.onHover} text='Python'/>
+          <ToolsElement onHover={props.onHover} text='Unity'/>
+          <ToolsElement onHover={props.onHover} text='React'/>
+          <ToolsElement onHover={props.onHover} text='Blender Addons' borderRadius='0px 15px 15px 0px'/>
+      </div>
+    </>
   )
 }
 
