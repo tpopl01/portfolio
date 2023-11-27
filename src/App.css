@@ -16,13 +16,34 @@ html{
   --tertiary-color: #45a29e;
   --font-color: #45a29e;
   --heading-color:#66fcf1;
+
+  scroll-snap-stop: normal;
+  scroll-snap-type: y mandatory;
+  transition: ease 0.5s;
+}
+
+svg{
+  fill:var(--heading-color);
+}
+svg:hover{
+  fill:var(--tertiary-color);
+}
+
+section{
+  scroll-snap-align: start;
 }
 
 h1{
   color: var(--heading-color);
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
 h2{
+  color: var(--heading-color);
+}
+
+h3{
   color: var(--heading-color);
 }
 
@@ -31,6 +52,16 @@ p{
 }
 
 a{
-  color: var(--font-color);
+  color: var(--heading-color);
   text-decoration: none;
+}
+
+a:hover{
+  color: var(--font-color) !important;
+}
+
+@media (max-width: 600px) {
+  html{
+    scroll-snap-type: none;
+  }
 }
