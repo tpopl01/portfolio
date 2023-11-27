@@ -1,11 +1,21 @@
+import styles from "./styles/Expertise.module.css"
 interface IProps{
-    text:string
+    title:string,
+    text:string,
+    children:any,
+    onHover:()=>void
 }
 
 const ExpertiseElement = (props:IProps) => {
   return (
-    <div style={{minWidth:"100px"}}>{props.text}</div>
+    <div onMouseEnter={props.onHover} className={styles.expertiseElement}>
+      <h3>{props.title}</h3>
+      <p>{props.text}</p>
+      {props.children}
+    </div>
   )
 }
-
+ExpertiseElement.defaultProps={
+  children:<></>
+}
 export default ExpertiseElement
