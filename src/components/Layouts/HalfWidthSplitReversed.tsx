@@ -5,9 +5,9 @@ interface IProps{
     right:any
 }
 
-const HalfWidthSplit = (props:IProps) => {
+const HalfWidthSplitReversed = (props:IProps) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.containerInverted}>
         <div className={styles.split}>
             {props.left}
         </div>
@@ -18,4 +18,4 @@ const HalfWidthSplit = (props:IProps) => {
   )
 }
 
-export default HalfWidthSplit
+export default HalfWidthSplitReversed
