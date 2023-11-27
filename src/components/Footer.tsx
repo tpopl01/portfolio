@@ -1,13 +1,16 @@
-
+import { useMediaQuery } from "./hooks/useMediaQuery"
+import styles from "./styles/Footer.module.css"
 
 const Footer = () => {
+  const matches = useMediaQuery("(max-width: 600px)");
+  const seperator = matches?<></>:<p>|</p>
   return (
-    <div style={{height:"100px", width:"100%", display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", gap:"2rem", backgroundColor:"var(--secondary-color)"}}>
-        <a style={{color:"var(--heading-color)"}} href="mailto:timothypople@yahoo.co.uk">Github</a>
-        <p>|</p>  
-        <a style={{color:"var(--heading-color)"}} href="mailto:timothypople@yahoo.co.uk">timothypople@yahoo.co.uk</a>
-        <p>|</p>    
-        <a style={{color:"var(--heading-color)"}} href="mailto:timothypople@yahoo.co.uk">LinkedIn</a>
+    <div className={styles.footer}>
+        <a className={styles.footerLink} href="https://github.com/tpopl01">Github</a>
+        {seperator}  
+        <a className={styles.footerLink} href="mailto:timothypople@yahoo.co.uk">timothypople@yahoo.co.uk</a>
+        {seperator}      
+        <a className={styles.footerLink} href="https://www.linkedin.com/in/timothy-pople-54004a9a/?originalSubdomain=uk">LinkedIn</a>
     </div>
   )
 }
