@@ -1,0 +1,22 @@
+.footer{
+    padding:10px 10px 30px 10px; 
+    height:100%; 
+    width:100%; 
+    display:flex; 
+    flex-direction:row; 
+    flex-wrap:wrap; 
+    align-items:center; 
+    justify-content:center; 
+    gap:2rem; 
+    background-color:var(--secondary-color);
+}
+
+.footerLink{
+    color:var(--heading-color);
+}
+
+@media (max-width: 600px) {
+    .footer{
+        flex-direction:column; 
+    }
+  }
