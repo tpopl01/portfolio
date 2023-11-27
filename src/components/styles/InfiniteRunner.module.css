@@ -1,0 +1,13 @@
+.tooltipContainer{
+    position:absolute; 
+    left:10px; 
+    top:100px; 
+    text-align:left;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .tooltipContainer{
+        display: none;
+    }
+  }

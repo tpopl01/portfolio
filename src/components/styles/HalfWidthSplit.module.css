@@ -1,0 +1,30 @@
+.split{
+    width:50%; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+}
+
+.container{
+    width:100%; 
+    min-height:200px; 
+    display:flex; 
+    flex-direction:row; 
+    flex-wrap:wrap;
+    container-type: inline-size;
+}
+
+.containerInverted{
+    width:100%; 
+    min-height:200px; 
+    display:flex; 
+    flex-direction:row-reverse; 
+    flex-wrap:wrap;
+    container-type: inline-size;
+}
+
+@container (max-width: 600px) {
+    .split{
+        width:100%;
+    }
+}

@@ -1,0 +1,39 @@
+.toolElement{
+    min-width:100px; 
+    cursor:default; 
+    border-width:1px; 
+    padding:5px 10px; 
+    border-color:var(--secondary-color); 
+    color: var(--font-color) !important;
+    background-color: var(--secondary-color);
+    border-style:solid;
+}
+
+.toolElement:hover{
+    border-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    color: var(--heading-color) !important;
+}
+
+.tool{
+    container-type: inline-size;
+    padding:10px; 
+    display:flex; 
+    flex-direction:row; 
+    align-items:center; 
+    justify-content:center; 
+    flex-wrap:wrap; 
+    min-width:50%;
+}
+
+@container (max-width: 600px) {
+    .tool{
+        flex-direction:column; 
+        width: 90%;
+    }
+    .toolElement{
+        border-radius: 15px !important;
+        margin-top: 5px;
+        width: 100%;
+    }
+  }

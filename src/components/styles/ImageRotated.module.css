@@ -1,0 +1,36 @@
+.imageContainerLeft{
+    width:90%; 
+    padding:5px; 
+    background-color:var(--secondary-color); 
+    border-radius:15px;
+    transform:perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
+    transition: all 0.5s;
+}
+
+.imageContainerRight{
+    width:90%; 
+    padding:5px; 
+    background-color:var(--secondary-color); 
+    border-radius:15px;
+    transform:perspective(800px) rotateY(-25deg) scale(.8) rotateX(10deg);
+    transition: all 0.5s;
+}
+
+.imageContainerRight:hover{
+    transform:perspective(500px) rotateY(0deg) scale(1) rotateX(0deg);
+}
+.imageContainerLeft:hover{
+    transform:perspective(500px) rotateY(0deg) scale(1) rotateX(0deg);
+}
+
+.border{
+    width:100%; 
+    border-radius:15px; 
+    border-width:10px; 
+    border-style:solid; 
+    position:absolute; 
+    left:0px; 
+    right:0px; 
+    top:0px; 
+    bottom:0px;
+}
