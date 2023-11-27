@@ -1,0 +1,6 @@
+.tag{
+    color:var(--heading-color); 
+    border-radius:10px;
+    padding:2px 5px;
+    transition: ease 0.5s;
+}
