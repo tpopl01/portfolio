@@ -1,4 +1,4 @@
-import styles from "./TimelineElement.module.css"
+import styles from "./styles/TimelineElement.module.css"
 
 interface IProps{
     title:string,
