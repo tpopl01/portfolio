@@ -3,12 +3,13 @@ interface IProps{
     title:string,
     text:string,
     children:any,
-    onHover:()=>void
+    onHover:()=>void,
+    onLeave:()=>void
 }
 
 const ExpertiseElement = (props:IProps) => {
   return (
-    <div onMouseEnter={props.onHover} className={styles.expertiseElement}>
+    <div onMouseEnter={props.onHover} onMouseLeave={props.onLeave} className={styles.expertiseElement}>
       <h3>{props.title}</h3>
       <p>{props.text}</p>
       {props.children}
@@ -16,6 +17,7 @@ const ExpertiseElement = (props:IProps) => {
   )
 }
 ExpertiseElement.defaultProps={
-  children:<></>
+  children:<></>,
+  onLeave:()=>{}
 }
 export default ExpertiseElement
