@@ -27,7 +27,7 @@ const Works = () => {
                 </div>
               }
               right={
-                <ImageRight imageSource="./rendering.jpg"/>
+                <ImageRight imageAlt="Placeholder image of a Windows 3D model viewer" imageSource="./rendering.jpg"/>
               }
           />
           <HalfWidthSplitReversed
@@ -35,7 +35,7 @@ const Works = () => {
                 <div>
                     <h2>CAD to XR</h2>
                     <ParagraphNote title="Problem:" description="No easy way to bring CAD into XR"/>
-                    <ParagraphNote title="Solution:" description="Developed a CAD to XR model converter and viewer that works both standalone and integrates as an addon"/>
+                    <ParagraphNote title="Solution:" description="Developed a CAD to XR model converter and viewer that works both standalone and integrates as an addon in Unity, Blender and Unreal"/>
                       <TagContainer>
                           <Tag tagName="React"/>
                           <Tag tagName="JavaScript"/>
@@ -45,7 +45,7 @@ const Works = () => {
                 </div>
               }
               right={
-                <ImageLeft imageSource="./cad.jpg"/>
+                <ImageLeft imageAlt="Placeholder image of a Blender scene" imageSource="./cad.jpg"/>
               }
           />
           <HalfWidthSplit 
@@ -63,7 +63,7 @@ const Works = () => {
                   </div>
               }
               right={
-                <ImageRight imageSource="./editor.jpg"/>
+                <ImageRight imageAlt="Placeholder image of videos" imageSource="./editor.jpg"/>
               }
           />
           <HalfWidthSplitReversed 
@@ -81,7 +81,7 @@ const Works = () => {
                 </div>
               }
               right={
-                <ImageLeft imageSource="./increase_graph.png"/>
+                <ImageLeft imageAlt="Placeholder image of a graph showing efficiency increase" imageSource="./increase_graph.png"/>
               }
           />
           <HalfWidthSplit 
@@ -99,7 +99,7 @@ const Works = () => {
                   </div>
               }
               right={
-                <ImageRight imageSource="./unity.jpg"/>
+                <ImageRight imageAlt="Placeholder image of Unity Game Engine" imageSource="./unity.jpg"/>
               }
           />
       </div>
@@ -120,7 +120,7 @@ const Works = () => {
               </div>
             }
             right={
-              <ImageLeft imageSource="./work1.jpg"/>
+              <ImageLeft imageAlt="Image of preschool site" imageSource="./work1.jpg"/>
             }
         />
     </div>
