@@ -1,0 +1,23 @@
+.tooltip
+{
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tooltipTitle
+{
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--secondary-color);
+}
+.tooltipTitle h3
+{
+    width: 100%;
+    text-align: center;
+}
+
+.tooltipBody{
+    padding: 5px;
+}

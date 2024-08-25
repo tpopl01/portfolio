@@ -4,6 +4,7 @@ import RunnerShape from "./RunnerShape";
 import { useKeyPress } from "../hooks/useKeyPress";
 import useTimeout from "../hooks/useTimeout";
 import styles from "../styles/InfiniteRunner.module.css"
+import TooltipPanel from "../TooltipPanel";
 interface IProps{
   isHidden:boolean
 }
@@ -109,10 +110,12 @@ const InfiniteRunner = (props:IProps) => {
         {(!props.isHidden)?obstacles:<></>}
     </Canvas>
     <div className={styles.tooltipContainer}>
-        <p style={{color:"var(--heading-color)"}}><b>Score:</b> {score}</p>
-        <p style={{color:"var(--heading-color)"}}><b>High Score:</b> {highScore}</p>
-        <p style={{color:"var(--heading-color)"}}><b>Controls:</b> Left: A, Right: D</p>
-        <p style={{color:"var(--heading-color)"}}>Avoid the obstacles</p>
+        <TooltipPanel title={"Tooltip"}>
+          <p style={{color:"var(--heading-color)"}}><b>Score:</b> {score}</p>
+          <p style={{color:"var(--heading-color)"}}><b>High Score:</b> {highScore}</p>
+          <p style={{color:"var(--heading-color)"}}><b>Controls:</b> Left: A, Right: D</p>
+          <p style={{color:"var(--heading-color)"}}>Avoid the obstacles</p>
+        </TooltipPanel>
     </div>
     </div>
   )
