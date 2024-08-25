@@ -5,9 +5,11 @@ interface IProps{
 
 const NavigationElement = (props:IProps) => {
   return (
-    <div style={{padding:"20px 20px", cursor:"pointer"}}>
-        <a href={props.id}>{props.text}</a>
-    </div>
+    <a href={props.id}>
+      <div style={{padding:"20px 20px", cursor:"pointer"}}>
+          {props.text}
+      </div>
+    </a>
   )
 }
 
