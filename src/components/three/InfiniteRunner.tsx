@@ -1,15 +1,18 @@
 import { Canvas } from "@react-three/fiber"
-import {useEffect, useState} from "react"
+import {useEffect, useRef, useState} from "react"
 import RunnerShape from "./RunnerShape";
 import { useKeyPress } from "../hooks/useKeyPress";
 import useTimeout from "../hooks/useTimeout";
 import styles from "../styles/InfiniteRunner.module.css"
 import TooltipPanel from "../TooltipPanel";
+import useIsContextLost from "../hooks/useIsContextLost";
 interface IProps{
   isHidden:boolean
 }
 
 const InfiniteRunner = (props:IProps) => {
+    const canvas = useRef(null)
+    const isContextLost = useIsContextLost(canvas);
     const [speed, setSpeed] = useState<number>(0.01);
     const [score, setScore] = useState<number>(0);
     const [highScore, setHighScore] = useState<number>(0);
@@ -92,6 +95,7 @@ const InfiniteRunner = (props:IProps) => {
       }
 
   return (
+    isContextLost===false?
     <div style={{width:"100%", height:"100vh", visibility:props.isHidden?"hidden":"visible", transition:"all 1s"}}>
     <Canvas style={{height:"100vh"}} dpr={[1, 1.5]} camera={{ position: [0, 0, 15], fov: 45, near: 1, far: 30 }}>
         <color attach="background" args={['#0b0c10']} />
@@ -118,6 +122,8 @@ const InfiniteRunner = (props:IProps) => {
         </TooltipPanel>
     </div>
     </div>
+    :
+    <></>
   )
 }
 

@@ -1,11 +1,14 @@
 import { Canvas } from "@react-three/fiber"
+import { useRef } from "react";
+import useIsContextLost from "../hooks/useIsContextLost";
 
 interface IProps{
     isHidden:boolean
 }
 
 const BlenderSim = (props:IProps) => {
-
+  const canvas = useRef(null)
+  const isContextLost = useIsContextLost(canvas);
     function Cube() {
         return (
           <mesh receiveShadow  position={[0, 0.5, 0]}>
@@ -16,6 +19,7 @@ const BlenderSim = (props:IProps) => {
       }
 
   return (
+    isContextLost===false?
     <div style={{width:"100%", height:"100vh", visibility:props.isHidden?"hidden":"visible", transition:"all 1s"}}>
     <Canvas style={{height:"100vh"}} dpr={[1, 1.5]} camera={{ position: [0, 3, 15], rotation:[0,0,0], fov: 45, near: 1, far: 30 }}>
         <color attach="background" args={['#0b0c10']} />
@@ -33,6 +37,8 @@ const BlenderSim = (props:IProps) => {
         <Cube/>
     </Canvas>
     </div>
+    :
+    <></>
   )
 }
 

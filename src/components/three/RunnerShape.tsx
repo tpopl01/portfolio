@@ -43,7 +43,7 @@ const RunnerShape = (props:IProps) => {
                     ref.current.position.set(xPos, props.yPos, zPos);
                     setZPos(Math.min(Math.random() * -1000*props.startOffset, -15 + (1.5*props.startOffset)));
                     setXPos(rand<33?-1:rand<66?0:1);
-                    console.log(state)
+                    state
                 }
             }
           })
