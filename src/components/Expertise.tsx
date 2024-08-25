@@ -50,7 +50,7 @@ const Expertise = (props:IProps) => {
             <Tag clearTheme={isHoveringWeb} activeName={props.activeTag} tagName="MySQL"/>
           </TagContainer>
         </ExpertiseElement>
-        <ExpertiseElement onHover={()=>{SetHover("app")}} onLeave={ClearHover} title="Desktop & Mobile Apps" text="2+ years making my web applications desktop and mobile compatible through Tauri in a professional working environment.">
+        <ExpertiseElement onHover={()=>{SetHover("app")}} onLeave={ClearHover} title="Desktop & Mobile Apps" text="2+ professional years making web applications desktop and mobile compatible through Tauri in a professional working environment.">
           <TagContainer>
             <Tag clearTheme={isHoveringApp} activeName={props.activeTag} tagName="Electron"/>
             <Tag clearTheme={isHoveringApp} activeName={props.activeTag} tagName="Tauri"/>
