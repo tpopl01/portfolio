@@ -17,8 +17,6 @@ html{
   --font-color: #45a29e;
   --heading-color:#66fcf1;
 
-  scroll-snap-stop: normal;
-  scroll-snap-type: y mandatory;
   transition: ease 0.5s;
 }
 
@@ -58,10 +56,4 @@ a{
 
 a:hover{
   color: var(--font-color) !important;
-}
-
-@media (max-width: 600px) {
-  html{
-    scroll-snap-type: none;
-  }
 }
