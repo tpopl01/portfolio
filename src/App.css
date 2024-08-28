@@ -27,10 +27,6 @@ svg:hover{
   fill:var(--tertiary-color);
 }
 
-section{
-  scroll-snap-align: start;
-}
-
 h1{
   color: var(--heading-color);
   font-size: 3.2em;
