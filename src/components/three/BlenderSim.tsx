@@ -19,12 +19,11 @@ const BlenderSim = (props:IProps) => {
       }
 
   return (
-    isContextLost===false?
+    isContextLost===false && props.isHidden===false?
     <div style={{width:"100%", height:"100vh", visibility:props.isHidden?"hidden":"visible", transition:"all 1s"}}>
-    <Canvas style={{height:"100vh"}} dpr={[1, 1.5]} camera={{ position: [0, 3, 15], rotation:[0,0,0], fov: 45, near: 1, far: 30 }}>
-        <color attach="background" args={['#0b0c10']} />
+    <Canvas style={{height:"100vh", backgroundColor:"transparent"}} frameloop="demand" dpr={[1, 1.5]} camera={{ position: [0, 3, 15], rotation:[0,0,0], fov: 45, near: 1, far: 30 }}>
         <hemisphereLight position={[0, 2, 15]} intensity={0.15} groundColor="#0b0c10" />
-        <spotLight position={[5, 5, 15]} angle={0.12} penumbra={1} intensity={10} castShadow shadow-mapSize={1024} />
+        <spotLight position={[5, 5, 15]} angle={0.12} penumbra={1} intensity={10} castShadow/>
         <rectAreaLight
         width={10}
         height={10}

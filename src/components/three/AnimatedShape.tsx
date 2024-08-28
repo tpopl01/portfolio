@@ -11,17 +11,14 @@ interface IProps{
 
 const AnimatedShape = (props:IProps) => {
     const ref = useRef<Mesh>(null);
-    const pos = new Vector3(props.target.x, props.target.y, props.target.z)
-    const scale = new Vector3(props.target.xSize, props.target.ySize, props.target.zSize)
-    const rot = new Quaternion().setFromEuler(new Euler(props.target.xRot, props.target.yRot, props.target.zRot))
     function HandleLerp() {
+        const pos = new Vector3(props.target.x, props.target.y, props.target.z)
+        const scale = new Vector3(props.target.xSize, props.target.ySize, props.target.zSize)
+        const rot = new Quaternion().setFromEuler(new Euler(props.target.xRot, props.target.yRot, props.target.zRot))
         return useFrame(() => {
             if(ref.current){
                 ref.current.position.lerp(pos, 0.025)
                 ref.current.quaternion.slerp(rot, 0.035)
-                // ref.current.rotation.x = rot.x
-                // ref.current.rotation.y = rot.y
-                // ref.current.rotation.z = rot.z
                 ref.current.scale.lerp(scale, 0.025)
             }
           })
