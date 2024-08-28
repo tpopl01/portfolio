@@ -8,7 +8,6 @@ export function useHover<T extends HTMLElement = HTMLElement>(elementRef: RefObj
 
     
     useEffect(()=>{
-        console.log(elementRef.current)
         if(elementRef.current){
             elementRef.current.addEventListener('mouseenter', function() {
                 handleMouseEnter()
