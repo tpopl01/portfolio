@@ -15,7 +15,7 @@ const Heading = () => {
     <div className={styles.headingContainer}>
     <TAnimation moveToEnd={isHeadingHovered}/>
     <div className={styles.textContainer}>
-      <div ref={ref}>
+      <div className={styles.container} ref={ref}>
         <h1>Timothy Pople</h1>
         <p className={styles.subText}>Software Engineer, Full Stack & Games Developer</p>
         <div className={styles.iconContainer}>
